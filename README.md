@@ -222,16 +222,10 @@ In another terminal, start the gdb debugger with the command `gdb-multiarch firm
 (gdb) step
 ```
 
-Alternatively, once you’ve connected to the chip, load the program using the `load` command:
+Alternatively, once you’ve connected to the chip, you type `continue`, wait a few seconds, and then hit Ctrl+C. If it asks, ‘Give up waiting?’, enter y for ‘yes’. After the program has run for a bit and then stopped, you can enter the `info registers` or `layout regs` command
 
 ```sh
 (gdb) target extended-remote:1234
-(gdb) load
-```
-
-Then you type `continue`, wait a few seconds, and then hit Ctrl+C. If it asks, ‘Give up waiting?’, enter y for ‘yes’. After the program has run for a bit and then stopped, you can enter the `info registers` or `layout regs` command
-
-```sh
 (gdb) continue
 (gdb) layout regs
 ```
